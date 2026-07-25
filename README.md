@@ -1,4 +1,4 @@
-# Arctura Base
+# Arctura x Base
 
 **Bittensor subnet for Base chain intelligence.**
 
