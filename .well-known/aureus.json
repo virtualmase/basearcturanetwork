@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "service_id": "base-arctura",
+  "name": "Arctura × Base Gateway",
+  "canonical_url": "https://base.arctura.network/",
+  "role": "gateway-and-x402-resource-server",
+  "status": "x402-canary",
+  "capabilities": ["service-registry", "paid-market-analysis", "base-sepolia-settlement"],
+  "endpoints": {
+    "registry": "https://base.arctura.network/network.json",
+    "health": "https://base.arctura.network/health",
+    "market_analysis": "https://base.arctura.network/api/v1/market-analysis"
+  },
+  "commerce": { "x402": "base-sepolia", "network": "eip155:84532", "max_price_usd": "0.01" }
+}

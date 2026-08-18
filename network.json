@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "network_id": "arctura-collective",
+  "updated_at": "2026-08-18",
+  "environment": "base-sepolia-canary",
+  "services": [
+    {
+      "id": "aureus",
+      "role": "policy-and-custody",
+      "url": "https://base.arctura.network/",
+      "health": "https://base.arctura.network/health",
+      "payments": "x402-buyer-policy"
+    },
+    {
+      "id": "base-arctura",
+      "role": "gateway-and-paid-market-analysis",
+      "url": "https://base.arctura.network/",
+      "health": "https://base.arctura.network/health",
+      "payments": "x402-seller-canary"
+    },
+    {
+      "id": "aure",
+      "role": "entity-intelligence",
+      "url": "https://www.au-re.org/",
+      "descriptor": "https://www.au-re.org/.well-known/aureus.json",
+      "health": "https://www.au-re.org/api/health",
+      "payments": "x402-seller-canary"
+    },
+    {
+      "id": "swell-marketing",
+      "role": "human-governed-commercial-operations",
+      "url": "https://swellmarketing.xyz/",
+      "descriptor": "https://swellmarketing.xyz/.well-known/aureus.json",
+      "payments": "disabled"
+    },
+    {
+      "id": "arctura-network",
+      "role": "network-and-governance-signal",
+      "url": "https://arctura.network/",
+      "descriptor": "https://arctura.network/.well-known/aureus.json",
+      "payments": "disabled"
+    },
+    {
+      "id": "arm-agency",
+      "role": "autonomous-resource-management-agency",
+      "url": "https://www.arm-agency.com/",
+      "source_status": "authoritative-repository-unresolved",
+      "payments": "disabled"
+    },
+    {
+      "id": "arctura-collective",
+      "role": "ecosystem-catalog",
+      "url": "https://arcturacollective.netlify.app/",
+      "repository": "https://github.com/Arctura-Collective/Arctura-Collective",
+      "payments": "disabled"
+    },
+    {
+      "id": "signal-arctura",
+      "role": "independent-identity-and-reputation-record",
+      "url": "https://signalarctura.netlify.app/",
+      "repository": "https://github.com/Arctura-Collective/Signal",
+      "payments": "disabled"
+    }
+  ]
+}
