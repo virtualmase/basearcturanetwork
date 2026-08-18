@@ -1,0 +1,20 @@
+{
+  "name": "base-arctura-network",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test",
+    "validate": "node validate_gateway_endpoint.mjs"
+  },
+  "dependencies": {
+    "@x402/core": "2.10.0",
+    "@x402/evm": "2.10.0",
+    "@x402/express": "2.10.0",
+    "express": "5.1.0"
+  }
+}

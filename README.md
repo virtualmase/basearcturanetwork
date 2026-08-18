@@ -1,6 +1,9 @@
 # Arctura × Base — Testnet Gateway
 
-This repository contains a preview-only static gateway for **Base Sepolia testnet** exploration. It connects three concepts without conflating their authority: bounded work, controlled resource access, and reviewable evidence receipts.
+This repository contains a static gateway and an activation-gated x402 resource
+server for **Base Sepolia testnet**. It connects bounded work, controlled
+resource access, and reviewable evidence receipts without conflating their
+authority.
 
 > **Status:** Early-access testnet surface. It is not a wallet, custodian, exchange, banking service, token sale, investment product, financial-advice service, payment processor, or mainnet application.
 
@@ -23,6 +26,23 @@ This repository contains a preview-only static gateway for **Base Sepolia testne
 | [`/health.json`](./health.json) | `configuration-ready` | Static deployment-scope declaration; it does not claim live chain, wallet, payment, or service health |
 
 Both files are static and public. They contain no credentials, wallet addresses, receiver addresses, facilitator URLs, payment amounts, account data, or transaction behavior. See [`GATEWAY_ENDPOINT_CONTRACT.md`](./GATEWAY_ENDPOINT_CONTRACT.md) for their required contract and validation boundaries.
+
+## x402 canary server
+
+The dynamic server protects `GET /api/v1/market-analysis` with the official
+x402 v2 Express middleware and exact EVM payment scheme. It refuses startup
+unless a non-zero receiver and HTTPS facilitator are explicitly supplied.
+
+```bash
+npm install
+X402_PAY_TO=0xYourBaseSepoliaReceiver \
+X402_FACILITATOR_URL=https://x402.org/facilitator \
+npm start
+```
+
+The canary is restricted in code to Base Sepolia and a maximum price of
+`$0.01`. `GET /health` reports dynamic service health; an unpaid request to the
+protected endpoint returns the protocol-standard `402` challenge.
 
 ## Local review
 
