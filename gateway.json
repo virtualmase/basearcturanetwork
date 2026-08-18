@@ -1,0 +1,40 @@
+{
+  "version": "1.0.0",
+  "service": "Arctura × Base Gateway",
+  "state": "preview",
+  "updated_at": "2026-08-18",
+  "network": {
+    "caip2": "eip155:84532",
+    "name": "Base Sepolia",
+    "environment": "testnet",
+    "mainnet_enabled": false
+  },
+  "capabilities": {
+    "configuration_descriptor": true,
+    "wallet_custody": false,
+    "wallet_creation": false,
+    "wallet_connection": false,
+    "balance_access": false,
+    "payments": false,
+    "trading": false,
+    "transfers": false,
+    "swaps": false,
+    "signing": false,
+    "contract_calls": false,
+    "autonomous_execution": false
+  },
+  "x402": {
+    "state": "paused",
+    "payment_fulfillment": false,
+    "receiver_configured": false,
+    "facilitator_configured": false
+  },
+  "links": {
+    "health": "/health.json",
+    "contract": "/GATEWAY_ENDPOINT_CONTRACT.md",
+    "base_connection_docs": "https://docs.base.org/base-chain/quickstart/connecting-to-base",
+    "base_faucets": "https://docs.base.org/base-chain/network-information/network-faucets",
+    "observatory": "https://arctura.org"
+  },
+  "boundary": "Static preview descriptor only. It does not accept credentials, create or connect wallets, execute transactions, process payments, provide trading functions, or enable mainnet activity."
+}

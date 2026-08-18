@@ -15,6 +15,15 @@ This repository contains a preview-only static gateway for **Base Sepolia testne
 | Mainnet | Not in scope |
 | Claims | Every product, task, resource, and evidence claim must carry a state and source boundary |
 
+## Static gateway endpoints
+
+| Endpoint | State | Purpose |
+|---|---|---|
+| [`/gateway.json`](./gateway.json) | `preview` | Machine-readable Base Sepolia gateway descriptor with explicit disabled capability fields |
+| [`/health.json`](./health.json) | `configuration-ready` | Static deployment-scope declaration; it does not claim live chain, wallet, payment, or service health |
+
+Both files are static and public. They contain no credentials, wallet addresses, receiver addresses, facilitator URLs, payment amounts, account data, or transaction behavior. See [`GATEWAY_ENDPOINT_CONTRACT.md`](./GATEWAY_ENDPOINT_CONTRACT.md) for their required contract and validation boundaries.
+
 ## Local review
 
 Use any static server, for example:
