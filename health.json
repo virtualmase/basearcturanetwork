@@ -1,0 +1,12 @@
+{
+  "service": "Arctura × Base Gateway",
+  "status": "configuration-ready",
+  "state": "preview",
+  "scope": "static descriptor deployment only",
+  "dynamic_validation": false,
+  "wallet_activity": false,
+  "payment_activity": false,
+  "trading_activity": false,
+  "mainnet_activity": false,
+  "x402_state": "paused"
+}
